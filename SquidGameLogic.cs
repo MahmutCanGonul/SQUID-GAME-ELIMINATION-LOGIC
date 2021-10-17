@@ -10,14 +10,14 @@ namespace SquidGameLogic
         
         static void Main(string[] args)
         {
-            
+             
             Random random = new Random();
             int ourPlayer = random.Next(500)+1;
             List<int> allPlayers = new List<int>();
             List<int> takeDeadPlayers = new List<int>();
             int count = 0;
             bool isOurPlayerDead = false;
-
+            Console.WriteLine("Your Number is :" + ourPlayer);
             for(int i=0; i < 500; i++)
             {
                 allPlayers.Add(i+1);
@@ -111,7 +111,7 @@ namespace SquidGameLogic
             for (int i=0; i < allPlayers.Count * 10; i++)
             {
                 int values2 = random.Next(allPlayers.Count) + 0;
-                if (values2 == ourPlayer)
+                if (allPlayers[values2] == ourPlayer)
                 {
                     isOurPlayerDead = true;
                 }
@@ -124,7 +124,7 @@ namespace SquidGameLogic
             {
                  
                 int values2 = random.Next(allPlayers.Count) + 0;
-                if (values2 == ourPlayer)
+                if (allPlayers[values2] == ourPlayer)
                 {
                     isOurPlayerDead = true;
                 }
@@ -140,9 +140,9 @@ namespace SquidGameLogic
             {
                 Console.WriteLine(ourPlayer + " is win.");
             }
-            
-            
-            Console.WriteLine(allPlayers.Count + " Winner is: "+ allPlayers[0]);
+
+
+            Console.WriteLine("Congrats!!! Winner is: "+ allPlayers[0]);
             
         }
     }
