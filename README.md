@@ -1,6 +1,7 @@
 # SQUID-GAME-ELIMINATION-LOGIC
 Squid game elimination logic with .NET
 
+This game has 500 player and 4 Competition for elimination system.
 
 OUTPUT: 
 
